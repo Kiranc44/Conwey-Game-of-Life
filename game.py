@@ -10,7 +10,7 @@ class GameOfLife:
 		if initial==None:
 			initial=[]
 		self.existing_state=initial
-		print(self.existing_state)
+		#print(self.existing_state)
 		self.next_state=[]
 		self.generation=0
 		self.all_neighbours=[]
@@ -59,7 +59,7 @@ class GameOfLife:
 			self.find_all_neighbour(cell)
 				
 		self.generation+=1	
-		print(self.next_state," ",self.generation)
+		#print(self.next_state," ",self.generation)
 		self.existing_state=self.next_state
 		self.next_state=[]	
 
@@ -97,8 +97,10 @@ def update(frameNum, img, grid,obj):
 
 def main():
 	start_state=[]
+	print("Enter cordinates for initial state.e.g:20,11")
+	print("Enter 's' to generate the pattern")
 	while True:
-		user=input("Enter the cordinates for initial state.S to start \n")
+		user=input("")
 		if(user=="S" or user=="s"):
 			break
 		else:
